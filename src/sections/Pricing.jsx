@@ -69,7 +69,7 @@ const PricingCards = ({ billingCycle }) => {
       ))}
 
       <img
-        src="/public/blurred-shape.svg"
+        src="/blurred-shape.svg"
         className="absolute top-3/4 left-1/2 -translate-x-2/5"
       />
     </div>
