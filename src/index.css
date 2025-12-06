@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Body Color Variants (Very dark blue-gray) */
+  --color-body-50: oklch(95% 0.005 264);
+  --color-body-100: oklch(90% 0.006 264);
+  --color-body-200: oklch(80% 0.007 264);
+  --color-body-300: oklch(65% 0.008 264);
+  --color-body-400: oklch(50% 0.009 264);
+
+  --color-body-500: oklch(12.964% 0.02739 261.707); /* your base */
+
+  --color-body-600: oklch(20% 0.011 264);
+  --color-body-700: oklch(12% 0.012 264);
+  --color-body-800: oklch(8% 0.01 264); /* Default body */
+  --color-body-900: oklch(5% 0.008 264);
+  --color-body-950: oklch(3% 0.006 264);
+
+  /* Card Color Variants (Dark blue-gray, slightly lighter) */
+  --color-card-50: oklch(96% 0.01 266.954);
+  --color-card-100: oklch(88% 0.015 266.954);
+  --color-card-200: oklch(72% 0.02 266.954);
+  --color-card-300: oklch(56% 0.025 266.954);
+  --color-card-400: oklch(38% 0.028 266.954);
+
+  --color-card-500: oklch(20.226% 0.0316 266.954);
+
+  --color-card-600: oklch(16% 0.03 266.954);
+  --color-card-700: oklch(12% 0.028 266.954);
+  --color-card-800: oklch(8% 0.024 266.954);
+  --color-card-900: oklch(5% 0.02 266.954);
+  --color-card-950: oklch(3% 0.015 266.954);
+
+  /* Primary Color Variants (Purple/Indigo) */
+  --color-primary-50: oklch(0.96 0.04 276);
+  --color-primary-100: oklch(0.9 0.08 276);
+  --color-primary-200: oklch(0.83 0.12 276);
+  --color-primary-300: oklch(0.75 0.15 276);
+  --color-primary-400: oklch(0.67 0.17 276);
+  --color-primary-500: oklch(0.55 0.18 276); /* Default primary */
+  --color-primary-600: oklch(0.51 0.19 276);
+  --color-primary-700: oklch(0.46 0.18 276);
+  --color-primary-800: oklch(0.38 0.15 276);
+  --color-primary-900: oklch(0.32 0.12 276);
+  --color-primary-950: oklch(0.24 0.09 276);
+
+  /* Extended Grayscale (slate) */
+  --color-slate-50: oklch(0.985 0.002 264);
+  --color-slate-100: oklch(0.97 0.003 264);
+  --color-slate-200: oklch(0.93 0.006 264);
+  --color-slate-300: oklch(0.87 0.012 264);
+  --color-slate-400: oklch(0.68 0.015 264);
+  --color-slate-500: oklch(0.52 0.018 264);
+  --color-slate-600: oklch(0.42 0.02 264);
+  --color-slate-700: oklch(0.32 0.022 264);
+  --color-slate-800: oklch(0.22 0.024 264);
+  --color-slate-900: oklch(0.15 0.02 264);
+  --color-slate-950: oklch(0.06 0.01 264);
+
+  /* Indigo (Primary accent) */
+  --color-indigo-100: oklch(0.9 0.08 276);
+  --color-indigo-200: oklch(0.83 0.12 276);
+  --color-indigo-300: oklch(0.75 0.15 276);
+  --color-indigo-400: oklch(0.67 0.17 276);
+  --color-indigo-500: oklch(0.59 0.18 276);
+  --color-indigo-600: oklch(0.51 0.19 276);
+  --color-indigo-700: oklch(0.46 0.18 276);
+  --color-indigo-800: oklch(0.38 0.15 276);
+  --color-indigo-900: oklch(0.32 0.12 276);
+
+  /* Sky (Secondary accent) */
+  --color-sky-400: oklch(0.75 0.14 235);
+  --color-sky-500: oklch(0.67 0.16 235);
+  --color-sky-600: oklch(0.59 0.17 235);
+
+  /* Fuchsia (Tertiary accent) */
+  --color-fuchsia-400: oklch(0.75 0.24 320);
+  --color-fuchsia-500: oklch(0.67 0.27 320);
+  --color-fuchsia-600: oklch(0.59 0.28 320);
+
+  /* Red (For interactive elements) */
+  --color-red-500: oklch(0.63 0.26 27);
+
+  /* Font Family */
+  --font-poppins: "Poppins", sans-serif;
+
+  /* Animations */
+  --animate-gradient: gradient 8s linear infinite;
+  --animate-infinite-scroll: infinite-scroll 6s linear infinite;
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-fade-in: fadeIn 0.7s cubic-bezier(0.68, -0.3, 0.32, 1);
+  --animate-fade-out: fadeOut 0.3s cubic-bezier(0.68, -0.3, 0.32, 1);
+  --animate-slide-up: slideUp 0.7s cubic-bezier(0.68, -0.3, 0.32, 1);
+  --animate-slide-down: slideDown 0.3s cubic-bezier(0.68, -0.3, 0.32, 1);
+
+  /* End :root */
+  /* Keyframes */
+  @keyframes gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  }
+
+  /* Custom Shadows */
+  --shadow-card: 0 1px 0 rgb(0 0 0 / 0.04), 0 1px 2px rgb(0 0 0 / 0.12),
+    inset 0 -2px 0 rgb(0 0 0 / 0.04);
+  --shadow-card-hover: 0 1px 0 rgb(0 0 0 / 0.04), 0 4px 8px rgb(0 0 0 / 0.12),
+    inset 0 -2px 0 rgb(0 0 0 / 0.04);
+
+  /* Transition Easings */
+  --ease-bounce: cubic-bezier(0.68, -0.3, 0.32, 1);
+}
+
+/* Additional utility classes */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      to right,
+      var(--color-indigo-400),
+      var(--color-indigo-100),
+      var(--color-sky-400),
+      var(--color-fuchsia-400)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+  }
+
+  .card-gradient-border {
+    background: linear-gradient(var(--color-slate-900), var(--color-slate-900))
+        padding-box,
+      linear-gradient(
+          45deg,
+          var(--color-slate-800),
+          var(--color-slate-600),
+          var(--color-slate-800)
+        )
+        border-box;
+    border: 1px solid transparent;
+  }
+}
+
+.container {
+  max-width: 1160px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  color: oklch(12.964% 0.02739 261.707);
+}
+
+p {
+  font-size: 18px;
+  color: var(--color-slate-500);
+  max-width: 750px;
+}
